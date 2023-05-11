@@ -8,6 +8,7 @@ body {
   line-height: 1.8rem;
   color: #666;
 }
+
 .pimg1 {
   background-image: url(nj.jpg);
   min-height: 100%;
@@ -32,11 +33,13 @@ body {
   background-image: url(ImageTwo.jpg);
   min-height: 400px;
 }
+
 .pimg,
 .pimg1,
 .pimg2,
 .pimg3,
-.pimg4 {
+.pimg4,
+.pimg5 {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,6 +115,60 @@ body {
   /* flex-direction: column; */
 }
 
+.pimg5 {
+  background-image: url(ImageBackgroung.jpg);
+  min-height: auto;
+}
+
+.imageContianer {
+  display: flex;
+}
+
+.imageCard {
+  width: 50%;
+  height: 30rem;
+  margin: 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.zoom {
+  transition: transform 0.2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+.secondImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  color: white;
+  background-color: rgb(174, 174, 174);
+  opacity: 0.4;
+  font-weight: 700;
+  font-size: 20px;
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #89253e,
+    #3a6186
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #89253e,
+    #3a6186
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 @media only screen and (max-device-width: 480px) {
   .customBox {
     position: absolute;
@@ -124,5 +181,13 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+  }
+  .imageContianer {
+    display: grid;
+  }
+
+  .imageCard {
+    width: 80%;
+    margin-left: 2.2rem;
   }
 }
